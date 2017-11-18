@@ -11,10 +11,8 @@ public class UserService {
     private UserBean userBean;
     @Autowired
     private UserDao userDao;
-
-
+    
     public void service() {
-
         userDao.add(userBean);
         System.out.println("ths is @Servive 业务层，调用持久层的Add方法");
     }
