@@ -11,6 +11,9 @@ public interface PersonService {
     //更新
     public void update(PersonBean person);
 
+    //获取所有数据
+    public List<PersonBean> getAllPerson();
+
     //获取person
     public PersonBean getPerson(int id);
 

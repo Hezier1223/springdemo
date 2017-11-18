@@ -5,14 +5,19 @@ import net.sf.json.JSONObject;
 
 public class JsonToObject {
 
-    /**
-     * @param args
-     */
     public void test() {
+
+        System.out.println("-------------------");
+
+        JSONObject jsonObjectDemo = new JSONObject();
+        jsonObjectDemo.put("name", "Hezier");
+        System.out.println(jsonObjectDemo);
+
+        System.out.println("-------------------");
 
         System.out.println("将object对象，字符串转为json对象");
 
-        Person person = new Person(1, "cgf");
+        Person person = new Person(1, "Hezier");
 
         JSONObject json = JSONObject.fromObject(person);
 

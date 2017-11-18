@@ -33,9 +33,17 @@
     </bean>
 
     <tx:annotation-driven transaction-manager="txManager"/>
-    <bean id="personService" class="com.hezier.demo.service.PersonServiceImpl">
-        <!--TODO:delete-->
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
 
+    <!--<bean id="personService" class="com.hezier.demo.service.PersonServiceImpl">-->
+    <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--</bean>-->
+
+    <!--Zoo Test-->
+    <!--<bean id="zoo" class="com.hezier.demo.bean.Zoo">-->
+    <!--<property name="monkey" ref="monkey"/>-->
+    <!--<property name="tiger" ref="tiger"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="tiger" class="com.hezier.demo.bean.Tiger"/>-->
+    <!--<bean id="monkey" class="com.hezier.demo.bean.Monkey"/>-->
 </beans>
