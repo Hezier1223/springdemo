@@ -6,7 +6,7 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
-    static Logger log = Logger.getLogger(App.class.getName());
+    private static Logger log = Logger.getLogger(App.class.getName());
 
     public static void main(String[] args) {
         log.info("Going to create HelloWord Obj");
