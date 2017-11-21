@@ -2,7 +2,6 @@ package com.hezier.demo;
 
 import com.hezier.demo.bean.Book;
 import com.hezier.demo.service.BookService;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -25,7 +24,6 @@ public class BookDaoImplTest {
         System.out.println(dataSource);
     }
 
-    @Ignore
     @Test
     public void test2() {
         String bookName = bookService.findBookById(1);
@@ -34,6 +32,6 @@ public class BookDaoImplTest {
 
     @Test
     public void test3() {
-        bookService.saveBook(new Book(2, "android源码分析", "1002", 45, 10));
+        bookService.saveBook(new Book(2, "android", "1002", 45, 10));
     }
 }

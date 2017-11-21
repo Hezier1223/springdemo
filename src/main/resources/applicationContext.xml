@@ -48,9 +48,13 @@
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" lazy-init="false">
         <!-- 注入datasource，给sessionfactoryBean内setdatasource提供数据源 -->
         <property name="dataSource" ref="dataSource"/>
-        <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+        <property name="configLocation" value="hibernate.cfg.xml"/>
         <!-- //加载实体类的映射文件位置及名称 -->
-        <property name="mappingLocations" value="classpath:com/hezier/demo/bean/*.hbm.xml"/>
+        <property name="mappingResources">
+            <list>
+                <value>/hibernate/Book.hbm.xml</value>
+            </list>
+        </property>
         <!--<property name="hibernateProperties">-->
         <!--<props>-->
         <!--<prop key="hibernate.autoReconnect">true</prop>-->
