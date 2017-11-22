@@ -31,18 +31,19 @@
     <!---->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/springexample"/>
+        <property name="url"
+                  value="jdbc:mysql://localhost:3306/springexample?useUnicode=true&amp;characterEncoding=utf-8"/>
         <property name="username" value="root"/>
         <!-- property池启动时的初始值  -->
         <property name="password" value="root"/>
         <!-- 连接name="initialSize" value="${initialSize}"/>-->
-        <!--<property name="initialSize" value="1"/>-->
-        <!--&lt;!&ndash; 连接池的最大值 &ndash;&gt;-->
-        <!--<property name="maxActive" value="500"/>-->
-        <!--&lt;!&ndash; 最大空闲值.当经过一个高峰时间后，连接池可以慢慢将已经用不到的连接慢慢释放一部分，一直减少到maxIdle为止 &ndash;&gt;-->
-        <!--<property name="maxIdle" value="2"/>-->
-        <!--&lt;!&ndash;  最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请 &ndash;&gt;-->
-        <!--<property name="minIdle" value="1"/>-->
+        <property name="initialSize" value="1"/>
+        <!-- 连接池的最大值 -->
+        <property name="maxActive" value="500"/>
+        <!-- 最大空闲值.当经过一个高峰时间后，连接池可以慢慢将已经用不到的连接慢慢释放一部分，一直减少到maxIdle为止 -->
+        <property name="maxIdle" value="2"/>
+        <!--  最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请 -->
+        <property name="minIdle" value="1"/>
     </bean>
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" lazy-init="false">

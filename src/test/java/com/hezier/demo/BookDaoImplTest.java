@@ -32,6 +32,6 @@ public class BookDaoImplTest {
 
     @Test
     public void test3() {
-        bookService.saveBook(new Book(2, "android", "1002", 45, 10));
+        bookService.saveBook(new Book(2, "啦啦啦啦", "1002", 45, 10));
     }
 }

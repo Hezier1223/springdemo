@@ -133,6 +133,5 @@
             <artifactId>spring-boot</artifactId>
             <version>1.4.2.RELEASE</version>
         </dependency>
-
     </dependencies>
 </project>
