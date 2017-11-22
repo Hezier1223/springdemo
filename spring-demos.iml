@@ -2,20 +2,12 @@
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset" name="ApplicationContext" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
-        </fileset>
-      </configuration>
+      <configuration />
     </facet>
     <facet type="hibernate" name="Hibernate">
       <configuration>
-        <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" value="59a97787-4e27-4291-b05f-fc90aed3c473" />
-          <unit-entry name="sessionFactory" value="59a97787-4e27-4291-b05f-fc90aed3c473" />
-        </datasource-map>
+        <datasource-map />
         <naming-strategy-map />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
       </configuration>
     </facet>
   </component>
