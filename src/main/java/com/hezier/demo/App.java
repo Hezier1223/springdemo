@@ -9,7 +9,7 @@ public class App {
     private static Logger log = Logger.getLogger(App.class.getName());
 
     public static void main(String[] args) {
-        log.info("Going to create HelloWord Obj");
+        log.info("Going to create HelloWorld Obj");
         String[] ID = {"10208", "10609", "10331"};
         System.out.println(ID.length);
         // TODO Auto-generated method stub

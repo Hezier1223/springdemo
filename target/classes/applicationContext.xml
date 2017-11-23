@@ -11,7 +11,12 @@
     <!-- 指定IOC容器扫描包 -->
     <context:component-scan base-package="com.hezier.demo"/>
 
+
     <bean id="userBean" class="com.hezier.demo.bean.UserBean" p:name="Hezier" p:password="zhuzhenghao"/>
+
+    <bean id="helloWorld" class="com.hezier.demo.tutorialspoint.HelloWorld">
+        <property name="message" value="Hello World!"/>
+    </bean>
 
     <!--Spring连接数据库配置-->
     <!--<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">-->

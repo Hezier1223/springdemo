@@ -10,25 +10,13 @@
     <context:annotation-config/>
     <!-- 指定IOC容器扫描包 -->
     <context:component-scan base-package="com.hezier.demo"/>
-
+    
     <bean id="userBean" class="com.hezier.demo.bean.UserBean" p:name="Hezier" p:password="zhuzhenghao"/>
 
-    <!--Spring连接数据库配置-->
-    <!--<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">-->
-    <!--&lt;!&ndash; results in a setDriverClassName(String) call &ndash;&gt;-->
-    <!--<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
-    <!--<property name="url" value="jdbc:mysql://localhost:3306/mydb"/>-->
-    <!--<property name="username" value="root"/>-->
-    <!--<property name="password" value="masterkaoli"/>-->
-    <!--</bean>-->
+    <bean id="helloWorld" class="com.hezier.demo.tutorialspoint.HelloWorld">
+        <property name="message" value="Hello World!"/>
+    </bean>
 
-    <!--<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource"-->
-    <!--destroy-method="close"-->
-    <!--p:driverClassName="com.mysql.jdbc.Driver"-->
-    <!--p:url="jdbc:mysql://localhost:3306/mydb"-->
-    <!--p:username="root"-->
-    <!--p:password="masterkaoli"/>-->
-    <!---->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url"
@@ -56,11 +44,6 @@
                 <value>/hibernate/Book.hbm.xml</value>
             </list>
         </property>
-        <!--<property name="hibernateProperties">-->
-        <!--<props>-->
-        <!--<prop key="hibernate.autoReconnect">true</prop>-->
-        <!--</props>-->
-        <!--</property>-->
     </bean>
 
     <!-- 配置Spring声明式事务 -->
@@ -82,19 +65,6 @@
         <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
     </aop:config>
 
-    <!-- aop配置 -->
-    <!--<aop:config proxy-target-class="true">-->
-    <!--&lt;!&ndash;切面 &ndash;&gt;-->
-    <!--<aop:aspect ref="advices">-->
-    <!--&lt;!&ndash; 切点 &ndash;&gt;-->
-    <!--<aop:pointcut expression="execution(* com.hezier.demo.aop.Math.*(..))" id="pointcut1"/>-->
-    <!--&lt;!&ndash;连接通知方法与切点 &ndash;&gt;-->
-    <!--<aop:before method="before" pointcut-ref="pointcut1"/>-->
-    <!--<aop:after method="after" pointcut-ref="pointcut1"/>-->
-    <!--</aop:aspect>-->
-    <!--</aop:config>-->
-    <!-- 配置事务切点，并把切点和事务属性关联起来 -->
-
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
@@ -102,19 +72,5 @@
     </bean>
 
     <tx:annotation-driven transaction-manager="txManager"/>
-
-
-    <!--<bean id="personService" class="com.hezier.demo.service.PersonServiceImpl">-->
-    <!--<property name="dataSource" ref="dataSource"/>-->
-    <!--</bean>-->
-
-    <!--Zoo Test-->
-    <!--<bean id="zoo" class="com.hezier.demo.bean.Zoo">-->
-    <!--<property name="monkey" ref="monkey"/>-->
-    <!--<property name="tiger" ref="tiger"/>-->
-    <!--</bean>-->
-
-    <!--<bean id="tiger" class="com.hezier.demo.bean.Tiger"/>-->
-    <!--<bean id="monkey" class="com.hezier.demo.bean.Monkey"/>-->
 
 </beans>
