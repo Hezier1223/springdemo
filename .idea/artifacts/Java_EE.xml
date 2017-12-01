@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="exploded-ear" name="Java EE">
-    <output-path>$PROJECT_DIR$/classes/artifacts/Java_EE</output-path>
-    <root id="root" />
-  </artifact>
-</component>
